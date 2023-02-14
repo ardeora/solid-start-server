@@ -19,11 +19,10 @@ export default function Counter() {
         weight: number;
       }>;
     },
-    staleTime: 2000,
   }));
 
   return (
-    <>
+    <div class="container">
       <button class="increment" onClick={() => setCount(count() + 1)}>
         Client Side Fetch: {count()}
       </button>
@@ -38,6 +37,6 @@ export default function Counter() {
           </div>
         )}
       </Show>
-    </>
+    </div>
   );
 }

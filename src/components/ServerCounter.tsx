@@ -22,11 +22,10 @@ export default function ServerCounter() {
     queryFn: async () => {
       return fetchPokemon(count());
     },
-    staleTime: 2000,
   }));
 
   return (
-    <>
+    <div class="container">
       <button class="increment" onClick={() => setCount(count() + 1)}>
         Server Side Fetch: {count()}
       </button>
@@ -41,6 +40,6 @@ export default function ServerCounter() {
           </div>
         )}
       </Show>
-    </>
+    </div>
   );
 }
